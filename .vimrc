@@ -2,7 +2,7 @@ filetype off
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 if has("syntax")
   syntax on

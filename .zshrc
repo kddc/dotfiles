@@ -107,4 +107,4 @@ source ~/.local_zsh_aliases
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #git logs
-alias zlog="git log --all --author='Julian Tiemann' --reverse --format=%B --maxcount=80 | sed '/^$/d' |  sed 's/^/* /'"
+#alias zlog="git log --all --author='Julian Tiemann' --reverse --format=%B --maxcount=80 | sed '/^$/d' |  sed 's/^/* /'"
