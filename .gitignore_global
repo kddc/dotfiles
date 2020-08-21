@@ -41,3 +41,8 @@ Thumbs.db
 tags
 .capistrano
 .vagrant
+.idea
+
+.metals/
+.bloop/
+project/metals.sbt

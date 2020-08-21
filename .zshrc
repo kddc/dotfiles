@@ -7,9 +7,14 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 # Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-# Cabal Path
-export PATH="/Users/hendricius/.cabal/bin:$PATH"
-
+# Android SDK
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+#fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -108,3 +113,12 @@ source ~/.local_zsh_aliases
 
 #git logs
 #alias zlog="git log --all --author='Julian Tiemann' --reverse --format=%B --maxcount=80 | sed '/^$/d' |  sed 's/^/* /'"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export VAULT_ADDR="https://52.28.132.68:8200"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$HOME/.fastlane/bin:$PATH"
+eval "$(rbenv init -)"
