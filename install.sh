@@ -6,7 +6,7 @@ git submodule update
 
 # setting vars
 cd
-REPO=dotfiles
+REPO=.dotfiles
 BASE_PATH=$(pwd)
 REPO_PATH=$BASE_PATH/$REPO
 FILES=( .gitconfig .gitignore_global .vim .vimrc .zsh_aliases .zsh_autocomp .zshrc .oh-my-zsh)

@@ -1,6 +1,11 @@
+ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 #export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"¬
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 # Node
@@ -42,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Misc exports
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/bin/vim
 export PAGER=less
 
 # Autoloads
@@ -110,15 +115,36 @@ source ~/.local_zsh_aliases
 # eval "$(boot2docker shellinit)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #git logs
 #alias zlog="git log --all --author='Julian Tiemann' --reverse --format=%B --maxcount=80 | sed '/^$/d' |  sed 's/^/* /'"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
-export PATH="/usr/local/opt/node@10/bin:$PATH"
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-export VAULT_ADDR="https://52.28.132.68:8200"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.fastlane/bin:$PATH"
-eval "$(rbenv init -)"
+
+zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
+
+#eval export PATH="/Users/julian/.jenv/shims:${PATH}"
+#export JENV_SHELL=zsh
+#export JENV_LOADED=1
+#unset JAVA_HOME
+#source '/usr/local/Cellar/jenv/0.5.4/libexec/libexec/../completions/jenv.zsh'
+#jenv rehash 2>/dev/null
+#jenv refresh-plugins
+#jenv() {
+#  typeset command
+#  command="$1"
+#  if [ "$#" -gt 0 ]; then
+#    shift
+#  fi
+#
+#  case "$command" in
+#  enable-plugin|rehash|shell|shell-options)
+#    eval `jenv "sh-$command" "$@"`;;
+#  *)
+#    command jenv "$command" "$@";;
+#  esac
+#}
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
