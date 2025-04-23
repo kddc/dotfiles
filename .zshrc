@@ -115,7 +115,7 @@ source ~/.local_zsh_aliases
 # eval "$(boot2docker shellinit)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #git logs
 #alias zlog="git log --all --author='Julian Tiemann' --reverse --format=%B --maxcount=80 | sed '/^$/d' |  sed 's/^/* /'"
@@ -148,3 +148,22 @@ zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 #  esac
 #}
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/Users/julian/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="/opt/homebrew/opt/python@3.12/libexec/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/julian/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/julian/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/Users/julian/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/julian/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
